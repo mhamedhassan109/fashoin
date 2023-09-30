@@ -1,0 +1,731 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'varela round' , sans-serif;
+}
+
+/*start header*/
+.header {
+    background-color: rgba(255, 255, 255, 0.753);
+    width: 100%;
+    overflow: auto;
+    position: fixed;
+    z-index: 1;
+    
+}
+.header .logo {
+    width: 60px;
+    margin-left: 30px;
+    float: left;
+}
+.header .list {
+    float: right;
+    margin-right: 30px;
+    list-style: none;
+}
+.header .list li {
+    display: inline-block;
+    padding: 20px 10px;
+    position: relative;
+}
+.header .list li a.active {
+    color: black;
+}
+.header .list li a.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: teal;
+}
+.header .list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    background-color: teal;
+    transition: 0.8s;
+}
+
+.header .list li:hover::before {
+    width: 100%;
+}
+.header .list li a {
+    text-decoration: none;
+    color: gray;
+}
+/*end header*/
+/*start landing*/
+.landing {
+background-image: url("../images/Depositphotos_33622661_s-2019.webp");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+position: relative;
+
+}
+.landing .text {
+    position: absolute;
+    left:50%;
+    top: 50%;
+}
+.landing .adress {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.landing .pargraf {
+    margin-bottom: 10px;
+}
+.btn-one {
+    padding: 20px 25px;
+    background-color: rgba(255, 255, 255, 0.767);
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 10px 0px;
+    margin-right: 10px;
+}
+.btn-one:hover {
+    background-color: white;
+}
+.btn-two {
+    padding: 20px 25px;
+    background-color: rgba(0, 128, 128, 0.822);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 10px 0px;
+}
+.btn-two:hover {
+    background-color: teal;
+}
+/*end landing*/
+/*start card*/
+.card {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.tittle {
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.tittle::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50% , -50%);
+    background-color: teal;
+    height: 3px;
+    width: 80px;
+}
+.card .item {
+    float: left;
+    margin-left: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px 40px;
+    border-radius: 6px;
+    position: relative;
+}
+.card .item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: teal;
+    transition: 1s;
+    z-index: -1;
+}
+.card .item:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+.card .item i {
+    font-size: 24px;
+    color: teal;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.card .item .heading-three {
+    font-size: 25px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+.card .item:hover .heading-three {
+    color: white;
+}
+.card .item:hover .pargraf {
+    color: white;
+}
+.card .item:hover a {
+    color: white;
+}
+.card .item:hover i {
+    color: white;
+}
+.card .item .pargraf {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+.card .item a {
+    text-decoration: none;
+    color: teal;
+    margin: 20px auto;
+    display: block;
+    transition: 1s;
+}
+/*end card*/
+/*start featured work*/
+.featured {
+ background-color: #eee;
+ overflow: auto;
+ padding-top: 100px;
+ padding-bottom: 100px;
+ margin-left: auto;
+ margin-right: auto;
+ width: 100%;
+}
+.prodect-one {
+    display: inline-block;
+    position: relative;
+    overflow: auto;
+    position: relative;
+}
+.iteem {
+    float: left;
+    margin: 10px 60px;
+    position: relative;
+}
+.iteem:hover .info {
+    opacity: 1;
+
+}
+.item:hover .photo {
+    opacity: 0.4;
+}
+.info {
+    position: absolute;
+    top: 35%;
+    left: 19%;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+    z-index: 2;
+}
+.info h4 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #2c4755;
+    margin-bottom: 10px;
+}
+.info p {
+    font-size: 17px;
+    color: white;
+    margin-bottom: 10px;
+}
+.info i {
+    font-size: 25px;
+    margin-left: 20px;
+}
+.info i.red:hover {
+    color: red;
+}
+.photo {
+    width: 320px;
+    border-radius: 10px;
+    transition: 1.3s;
+}
+/*start featured work*/
+/*start about*/
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: auto;
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heading-two {
+    position: relative;
+    margin-bottom: 30px;
+}
+.heading-two::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 70px;
+    height: 3px;
+    background-color: teal;
+}
+.contact {
+    float: left;
+    width: 50%;
+}
+.paragraph {
+    line-height: 1.5;
+    color: #777;
+    margin-bottom: 30px;
+}
+.check {
+    list-style: none;
+    
+}
+.check i {
+    color: teal;
+    margin-right: 10px;
+}
+.check li {
+    margin-bottom: 20px;
+}
+.images {
+    float: right;
+    width: 40%;
+    position: relative;
+}
+
+.chose {
+    list-style: none;
+    position: absolute;
+    bottom: -70px;
+    left: 30%;
+}
+.chose li {
+   float: left;
+   width: 13px;
+   height: 13px;
+   border: 1px solid teal;
+   border-radius: 50%;
+   margin-left: 10px;
+}
+.chose li.active {
+    background-color: teal;
+}
+.images:hover img {
+    margin-left: 60px;
+}
+.images::before {
+    content: "";
+    position: absolute;
+    right: 80px;
+    top: -27px;
+    height: 500px;
+    width: 150px;
+    background-color: teal;
+    z-index: -1;
+}
+.images img {
+    width: 300px;
+    transition: 2s;
+}
+/*end about*/
+/*start stats*/
+.stats {
+background-image: url("../images/pexels-max-fischer-5869611.jpg");
+background-size: cover;
+background-attachment: fixed;
+height: 400px;
+position: relative;
+overflow: auto;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+.contener {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+}
+.iconat {
+    z-index: 1;
+    color: white;
+    display: inline-block;
+    margin-left: 40px;
+    text-align: center;
+    padding: 20px;
+    
+}
+.iconat i {
+    color: teal;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.span-one {
+    display: block;
+    font-size: 14px;
+}
+.par {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*end stats*/
+/*start pricing*/
+.pricing {
+    background-color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: auto;
+}
+.pricing .price {
+    float: left;
+    width: 25%;
+    border: 1px solid teal;
+    border-radius: 6px;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 20px; 
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+   
+    
+    
+}
+.pricing .price:hover .cicle {
+    border: 2px solid white;
+    color: white;
+}
+.pricing .price:hover h5 {
+    color: white;
+}
+.pricing .price:hover .list li {
+    color: white;
+}
+.pricing .price::before {
+    content: "";
+    width: 100%;
+    height: 0%;
+    background-color: teal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    transition: 1s;
+}
+.pricing .price::after {
+    content: "";
+    width: 100%;
+    height: 0%;
+    background-color: teal;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1; 
+    transition: 1s;
+}
+.pricing .price:hover::before {
+    height: 50%;
+}
+.pricing .price:hover::after {
+    height: 50%;
+}
+.pricing .price h5 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #777;
+    transition: 1.5s;
+}
+.pricing .price .cicle {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 50%;
+    border: 2px solid teal;
+    margin: 20px auto;
+    transition: 1.5s;
+}
+.pricing .price .cicle .dolar {
+    font-size: 35px;
+    font-weight: bold;
+}
+.pricing .price .cicle .month {
+    font-size: 16px;
+    font-weight: bold;
+}
+.pricing .price .list {
+    list-style: none;
+}
+.pricing .price .list li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #777;
+    transition: 1.5s;
+}
+.pricing .price .btn {
+    padding: 10px 20px;
+    border: 1px solid teal;
+    border-radius: 10px;
+    margin: 10px auto;
+    transition: 0.5s;
+}
+.pricing .price .btn:hover {
+    background-color: teal;
+    color: white;
+    border: 1px solid white;
+}
+/*end pricing*/
+/*start testmomalis*/
+.testmomalis {
+background-image: url("../images/cover.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+height: 400px;
+padding-top: 100px;
+padding-bottom: 100px;
+
+}
+.testmomalis .test {
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+.testmomalis .test .text {
+    margin-bottom: 35px;
+    padding: 26px 0px 0px 0px;
+}
+.testmomalis .test .testmon {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 4px solid white;
+   outline: 3px solid teal;
+    float: left;
+    margin-right: 10px;
+}
+.testmomalis .test .text h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.testmomalis .test .text span {
+  display: block;
+  font-size: 13px;
+  color: teal;
+}
+.testmomalis .test  p {
+    font-size: 17px;
+    display: inline-block;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+/*end testmomalis*/
+/*start our-team*/
+.our-team {
+padding-top: 100px;
+padding-bottom: 100px;
+overflow: auto;
+}
+.our-team .team {
+    float: left;
+    width: 23%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-right-color: teal;
+    border-left-color: teal;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    position: relative;
+}
+.our-team .team::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #bec0bf26;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-right-color: teal;
+    border-left-color: teal;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    transition: 1s;
+}
+.our-team .team:hover::before {
+    height: 100%;
+}
+
+.our-team .team .scial {
+    position: absolute;
+    right: 25px;
+    top: 24px;
+    opacity: 0;
+    transition: 1s;
+}
+.our-team .team:hover .scial {
+    opacity: 1;
+}
+.our-team .team .scial i {
+    display: block;
+    margin-bottom: 10px;
+    color: teal;
+}
+.our-team .team .photoo {
+    width: 150px;
+}
+.our-team .team .cont h3 {
+    margin-bottom: 10px;
+}
+.our-team .team .cont p {
+    color: #777;
+    margin-bottom: 10px;
+}
+/*end our-team*/
+/*start recent-news*/
+.recent-news {
+padding-top: 100px;
+padding-bottom: 100px;
+position: relative;
+overflow: auto;
+}
+.recent-news .recent {
+width: 30%;
+float: left;
+margin-left: 1%;
+margin-right: 1%;
+background-color: #eeeeee34;
+padding: 20px;
+position: relative;
+z-index: 2;
+border-radius: 10px;
+}
+.recent-news .recent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 0%;
+    background-color: rgba(0, 128, 128, 0.13);
+    transition: 1s;
+    border-radius: 10px;
+}
+.recent-news .recent::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 0%;
+    border-radius: 10px;
+    background-color: rgba(0, 128, 128, 0.13);
+    transition: 1s;
+}
+.recent-news .recent:hover::before {
+    height: 100%;
+}
+.recent-news .recent:hover::after {
+    height: 100%;
+}
+.recent-news .recent img {
+    width: 250px;
+}
+.recent-news .recent .comment {
+    margin: 10px auto;
+}
+.recent-news .recent .comment i {
+    font-size: 13px;
+    margin-right: 10px;
+    color: teal;
+}
+.recent-news .recent .comment span {
+    margin-left: 5px;
+    color: black;
+    font-size: 10px;
+}
+.recent-news .recent .heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.recent-news .recent .par {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+.recent-news .recent .btn-recent {
+    text-decoration: none;
+    color: teal;
+}
+
+/*end recent-news*/
+/*start footer*/
+.footer {
+   padding-top: 40px;
+    position: relative;
+    background-color: #2c4755;
+}
+.footer .content {
+text-align: center;
+}
+.footer .content .img-foot {
+    width: 200px;
+}
+.footer .content .iconatt i {
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: teal;
+    padding: 15px;
+}
+.footer .content .iconatt i:hover {
+    color: black;
+}
+.footer .content .copyright {
+    padding: 20px;
+    border: 1px solid #eeeeee8f;
+    margin-top: 30px;
+    color: white;
+}
+.footer .content .copyright span {
+    color: teal;
+}
